@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Typing Effect Setup
     const words = [
-        "Java Full Stack Developer",
-        "GenAI & Prompt Specialist",
-        "IoT & Embedded Developer",
-        "Tech Enthusiast"
+        "Python Backend & REST API Developer",
+        "Java Full Stack Engineer",
+        "Python Flask & IoT Systems Specialist",
+        "Google Gemini & GenAI Developer",
+        "ECE & Smart Systems Innovator"
     ];
     let wordIndex = 0;
     let charIndex = 0;

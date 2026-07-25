@@ -62,17 +62,16 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        <span class="pulse-dot"></span> Open for Engineering Innovations
+                        <span class="pulse-dot"></span> Open for Python & Engineering Innovations
                     </div>
                     <h1 class="hero-title">
                         Hi, I'm <span class="gradient-text">Peddireddy Tarun</span>
                     </h1>
                     <h2 class="hero-subtitle">
-                        IoT Engineer & <span class="typing-effect" id="typing-text"></span>
+                        Python & <span class="typing-effect" id="typing-text"></span>
                     </h2>
                     <p class="hero-description">
-                        Combining Internet of Things (IoT), Java Full Stack Development, and Generative AI to design
-                        intelligent smart tracking systems and modern web applications.
+                        Combining Python Backend Development, Flask REST APIs, Java Full Stack, and Generative AI to engineer high-performance smart tracking systems, IoT microservices, and modern web applications.
                     </p>
 
                     <div class="hero-cta-group">
@@ -87,20 +86,40 @@
                 </div>
 
                 <div class="hero-visual">
-                    <div class="avatar-card glass-card">
-                        <div class="avatar-wrapper">
-                            <img src="tarun_avatar.png" alt="Peddireddy Tarun Avatar" class="avatar-img"
-                                id="avatar-img">
-                            <div class="avatar-glow"></div>
+                    <div class="code-terminal-card glass-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title"><i class="fa-brands fa-python color-python"></i> backend_service.py</span>
+                        </div>
+                        <div class="terminal-body">
+                            <pre><code><span class="py-keyword">from</span> flask <span class="py-keyword">import</span> Flask, jsonify
+<span class="py-keyword">import</span> telemetry_service
+
+app = Flask(__name__)
+
+<span class="py-decorator">@app.route</span>(<span class="py-string">'/api/iot/track'</span>, methods=[<span class="py-string">'POST'</span>])
+<span class="py-keyword">def</span> <span class="py-func">process_telemetry</span>():
+    device = telemetry_service.verify_beacon()
+    <span class="py-keyword">return</span> jsonify({
+        <span class="py-string">"status"</span>: <span class="py-string">"ACTIVE"</span>,
+        <span class="py-string">"coords"</span>: device.location
+    })
+
+<span class="py-keyword">if</span> __name__ == <span class="py-string">'__main__'</span>:
+    app.run(port=<span class="py-number">5000</span>, debug=<span class="py-keyword">True</span>)</code></pre>
                         </div>
                         <div class="floating-badge badge-1">
-                            <i class="fa-brands fa-java color-java"></i> Java Full Stack
+                            <i class="fa-brands fa-python color-python"></i> Python 3 & Flask APIs
                         </div>
                         <div class="floating-badge badge-2">
-                            <i class="fa-solid fa-microchip color-iot"></i> IoT & GPS Tracking
+                            <i class="fa-solid fa-microchip color-iot"></i> IoT Sensor Telemetry
                         </div>
                         <div class="floating-badge badge-3">
-                            <i class="fa-solid fa-brain color-ai"></i> GenAI & LLMs
+                            <i class="fa-solid fa-brain color-ai"></i> Google Gemini & GenAI
                         </div>
                     </div>
                 </div>
@@ -118,27 +137,22 @@
                     <div class="about-paragraphs">
                         <p class="about-para">
                             I am currently pursuing my <strong>B.Tech in Internet of Things (IoT)</strong> at
-                            <strong>Ramachandra College of Engineering (RCEE)</strong>, having completed my <strong>Diploma in Electronics and Communication Engineering (ECE)</strong> as an ECE student at <em>VKR & VNB Polytechnic College</em> (2022–2025) and schooling at <em>BHARATHI VIDDYA BHAVAN School</em> (2022 Batch). My strong background in ECE and IoT equips me with a rare, practical blend of embedded hardware knowledge, sensor networks, and modern software engineering principles.
+                            <strong>Ramachandra College of Engineering (RCEE)</strong>, having completed my <strong>Diploma in Electronics and Communication Engineering (ECE)</strong> as an ECE student at <em>VKR & VNB Polytechnic College</em> (2022–2025) and schooling at <em>BHARATHI VIDDYA BHAVAN School</em> (2022 Batch). My solid grounding in ECE and IoT provides me with a deep, practical understanding of embedded microcontrollers, sensor networks, and real-time hardware-software interfacing.
                         </p>
                         <p class="about-para">
-                            On the technical front, I specialize in <strong>Java Full Stack Development</strong>,
-                            <strong>Python</strong>, <strong>HTML5/CSS3/JavaScript</strong>, and relational databases. I
-                            integrate microcontrollers, GPS modules, and BLE beacons with web backends such as Python
-                            Flask to build real-time IoT solutions. Additionally, as a certified Google Gemini student,
-                            I actively apply <strong>Generative AI & Prompt Engineering</strong> to build intelligent
-                            applications and streamline modern development workflows.
+                            On the software development front, I specialize in <strong>Python Development</strong>, <strong>Flask Framework & RESTful APIs</strong>, <strong>Java Full Stack Architecture</strong>, and <strong>Relational Databases (SQL)</strong>. I build end-to-end Python backend services that ingest IoT telemetry, connect BLE location beacons, and render dynamic live tracking interfaces. Furthermore, as a certified Google Gemini student, I actively apply <strong>Python for Generative AI, Prompt Engineering, and LLM Workflow Automation</strong> to develop next-generation intelligent applications.
                         </p>
                     </div>
 
                     <!-- Core Skill Chips integrated in About Me -->
                     <div class="about-skills-row">
-                        <span class="skill-chip"><i class="fa-brands fa-java"></i> Java Full Stack</span>
-                        <span class="skill-chip"><i class="fa-brands fa-python"></i> Python</span>
-                        <span class="skill-chip"><i class="fa-solid fa-microchip"></i> IoT & GPS Sensors</span>
-                        <span class="skill-chip"><i class="fa-solid fa-wifi"></i> BLE Protocols</span>
-                        <span class="skill-chip"><i class="fa-brands fa-html5"></i> Web Development</span>
-                        <span class="skill-chip"><i class="fa-solid fa-flask"></i> Python Flask</span>
-                        <span class="skill-chip"><i class="fa-solid fa-sparkles"></i> Google Gemini & GenAI</span>
+                        <span class="skill-chip"><i class="fa-brands fa-python color-python"></i> Python 3 & Scripting</span>
+                        <span class="skill-chip"><i class="fa-solid fa-flask"></i> Python Flask & REST APIs</span>
+                        <span class="skill-chip"><i class="fa-brands fa-java color-java"></i> Java Full Stack</span>
+                        <span class="skill-chip"><i class="fa-solid fa-microchip color-iot"></i> IoT & Sensor Telemetry</span>
+                        <span class="skill-chip"><i class="fa-solid fa-wifi"></i> BLE Tracking Protocols</span>
+                        <span class="skill-chip"><i class="fa-solid fa-sparkles color-ai"></i> Python GenAI & LLMs</span>
+                        <span class="skill-chip"><i class="fa-solid fa-database"></i> SQL Databases</span>
                         <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
                     </div>
                 </div>
