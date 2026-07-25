@@ -548,39 +548,35 @@ h1, h2, h3, h4 {
 }
 
 /* About Section */
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.about-container {
+    padding: 3rem 2.5rem;
 }
 
-.about-card {
-    padding: 2.5rem 2rem;
-    text-align: left;
-}
-
-.about-icon {
-    width: 54px;
-    height: 54px;
-    border-radius: var(--radius-md);
-    background: rgba(56, 189, 248, 0.1);
-    color: var(--primary);
+.about-paragraphs {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
 }
 
-.about-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-}
-
-.about-card p {
+.about-para {
+    font-size: 1.05rem;
+    line-height: 1.8;
     color: var(--text-muted);
-    font-size: 0.95rem;
 }
+
+.about-para strong {
+    color: var(--text-main);
+}
+
+.about-skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
 
 /* Skills Section */
 .skills-grid {
@@ -729,6 +725,7 @@ h1, h2, h3, h4 {
 
 .rcee-bg { background: linear-gradient(135deg, #10b981, #059669); }
 .srm-bg { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+.java-bg { background: linear-gradient(135deg, #f89820, #e76f51); }
 .google-bg { background: linear-gradient(135deg, #4285F4, #EA4335); }
 .ai-bg { background: linear-gradient(135deg, #8b5cf6, #ec4899); }
 .python-bg { background: linear-gradient(135deg, #306998, #FFE873); color: #306998; }
