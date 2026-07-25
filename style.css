@@ -362,12 +362,47 @@ h1, h2, h3, h4 {
     background: var(--border-color);
 }
 
+/* Visual Backdrop Shapes */
+.visual-backdrop-shape {
+    position: absolute;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    filter: blur(45px);
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    animation: shapeMorph 12s ease-in-out infinite alternate;
+}
+
+.shape-1 {
+    width: 320px;
+    height: 320px;
+    background: linear-gradient(135deg, #38bdf8, #818cf8);
+    top: -30px;
+    right: -30px;
+}
+
+.shape-2 {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, #c084fc, #38bdf8);
+    bottom: -30px;
+    left: -30px;
+    animation-delay: -6s;
+}
+
+@keyframes shapeMorph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(0deg) scale(1); }
+    50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; transform: rotate(180deg) scale(1.1); }
+    100% { border-radius: 50% 50% 30% 70% / 30% 60% 40% 70%; transform: rotate(360deg) scale(1); }
+}
+
 /* Avatar Card */
 .avatar-card {
     padding: 1.2rem;
     position: relative;
     max-width: 380px;
     width: 100%;
+    z-index: 1;
 }
 
 .avatar-wrapper {
@@ -544,7 +579,7 @@ h1, h2, h3, h4 {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
 }
 
