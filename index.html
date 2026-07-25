@@ -86,31 +86,10 @@
                 </div>
 
                 <div class="hero-visual">
-                    <div class="code-terminal-card glass-card">
-                        <div class="terminal-header">
-                            <div class="terminal-dots">
-                                <span class="dot dot-red"></span>
-                                <span class="dot dot-yellow"></span>
-                                <span class="dot dot-green"></span>
-                            </div>
-                            <span class="terminal-title"><i class="fa-brands fa-python color-python"></i> backend_service.py</span>
-                        </div>
-                        <div class="terminal-body">
-                            <pre><code><span class="py-keyword">from</span> flask <span class="py-keyword">import</span> Flask, jsonify
-<span class="py-keyword">import</span> telemetry_service
-
-app = Flask(__name__)
-
-<span class="py-decorator">@app.route</span>(<span class="py-string">'/api/iot/track'</span>, methods=[<span class="py-string">'POST'</span>])
-<span class="py-keyword">def</span> <span class="py-func">process_telemetry</span>():
-    device = telemetry_service.verify_beacon()
-    <span class="py-keyword">return</span> jsonify({
-        <span class="py-string">"status"</span>: <span class="py-string">"ACTIVE"</span>,
-        <span class="py-string">"coords"</span>: device.location
-    })
-
-<span class="py-keyword">if</span> __name__ == <span class="py-string">'__main__'</span>:
-    app.run(port=<span class="py-number">5000</span>, debug=<span class="py-keyword">True</span>)</code></pre>
+                    <div class="avatar-card glass-card">
+                        <div class="avatar-wrapper">
+                            <img src="tarun_avatar.png" alt="Peddireddy Tarun Avatar" class="avatar-img" id="avatar-img">
+                            <div class="avatar-glow"></div>
                         </div>
                         <div class="floating-badge badge-1">
                             <i class="fa-brands fa-python color-python"></i> Python 3 & Flask APIs

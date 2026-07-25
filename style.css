@@ -363,13 +363,42 @@ h1, h2, h3, h4 {
 }
 
 /* Avatar Card */
-.hero-visual {
+.avatar-card {
+    padding: 1.2rem;
     position: relative;
-    display: flex;
-    justify-content: center;
+    max-width: 380px;
+    width: 100%;
 }
 
-/* Code Terminal Card (Replacing Avatar Image) */
+.avatar-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 2px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.2);
+}
+
+.avatar-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+    transition: var(--transition-smooth);
+}
+
+.avatar-card:hover .avatar-img {
+    transform: scale(1.03);
+}
+
+.avatar-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 30%, rgba(56, 189, 248, 0.2) 100%);
+    pointer-events: none;
+}
+
+/* Code Terminal Card */
 .code-terminal-card {
     padding: 1.2rem;
     position: relative;
