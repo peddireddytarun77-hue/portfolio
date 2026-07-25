@@ -903,21 +903,20 @@ h1, h2, h3, h4 {
     color: #10b981;
 }
 
-/* Education Section - Single Column Layout */
+/* Education Section - 3 Items Side-by-Side in 1 Line */
 .edu-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     width: 100%;
-    margin: 0 auto;
 }
 
 .edu-card {
-    padding: 1.8rem 2.2rem;
+    padding: 1.8rem 1.5rem;
     display: flex;
-    gap: 1.8rem;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
     border-radius: 16px;
     background: rgba(15, 23, 42, 0.85);
     border: 1px solid var(--border-color);
@@ -926,7 +925,7 @@ h1, h2, h3, h4 {
 }
 
 .edu-card:hover {
-    transform: translateX(8px);
+    transform: translateY(-8px);
     border-color: var(--primary);
     box-shadow: 0 15px 35px rgba(56, 189, 248, 0.2);
 }
